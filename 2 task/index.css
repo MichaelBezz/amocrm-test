@@ -506,25 +506,7 @@ a {
   padding: 72px 70px 20px;
 }
 
-.footer__column--about {
-  grid-area: f-about;
-}
-
-.footer__column--menu {
-  grid-area: f-menu;
-}
-
-.footer__column--contact {
-  grid-area: f-contact;
-}
-
-.footer__copyright {
-  grid-area: f-copyright;
-}
-
-/* about */
-
-.about__title {
+.footer__title {
   margin: 0;
   margin-bottom: 21px;
   font-size: 14px;
@@ -535,7 +517,7 @@ a {
   color: var(--color-comet);
 }
 
-.about__list {
+.footer__list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -544,87 +526,58 @@ a {
   list-style-type: none;
 }
 
-.about__item:not(:last-child) {
+.footer__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.about__link {
+.footer__link {
   display: block;
   font-size: 16px;
   line-height: 1.18;
 }
 
-/* menu */
+/* --about */
 
-.menu {
+.footer__column--about {
+  grid-area: f-about;
+}
+
+/* --menu */
+
+.footer__column--menu {
+  grid-area: f-menu;
   display: grid;
   grid-template-columns: 176px 1fr;
   column-gap: 20px;
 }
 
-.menu__title {
+.footer__column--menu .footer__title {
   grid-column: 1 / -1;
-  margin: 0;
-  margin-bottom: 21px;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-comet);
 }
 
-.menu__list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+/* --contact */
+
+.footer__column--contact {
+  grid-area: f-contact;
 }
 
-.menu__item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.menu__link {
-  display: block;
-  font-size: 16px;
-  line-height: 1.18;
-}
-
-/* contact */
-
-.contact__title {
-  margin: 0;
-  margin-bottom: 21px;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 700;
+.footer__column--contact .footer__title {
   text-align: right;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-comet);
 }
 
-.contact__list {
-  display: flex;
-  flex-direction: column;
+.footer__column--contact .footer__list {
   align-items: flex-end;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
-.contact__item:not(:last-child) {
+.footer__column--contact .footer__item:not(:last-child) {
   margin-bottom: 17px;
 }
 
-.contact__phone.phone {
+.footer__phone.phone {
   padding: 0;
 }
 
-.contact__social.social {
+.footer__social.social {
   min-width: 82px;
   width: 200px;
   grid-template-columns: repeat(auto-fit, 22px);
@@ -632,12 +585,12 @@ a {
   gap: 8px;
 }
 
-.contact__social.social__link {
+.footer__social.social__link {
   width: 22px;
   height: 22px;
 }
 
-.contact__address {
+.footer__address {
   display: block;
   font-size: 16px;
   line-height: 1.18;
@@ -645,6 +598,10 @@ a {
 }
 
 /* copyright */
+
+.footer__copyright {
+  grid-area: f-copyright;
+}
 
 .copyright {
   font-family: var(--secondary-font);
